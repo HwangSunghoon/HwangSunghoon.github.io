@@ -255,62 +255,6 @@
       color: var(--muted);
     }
 
-    .projects-list {
-      display: grid;
-      gap: 34px;
-    }
-
-    .project {
-      display: grid;
-      grid-template-columns: 170px 1fr;
-      gap: 24px;
-      padding: 0 0 34px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .project:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .project-meta {
-      color: var(--accent);
-      font-size: 0.88rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      padding-top: 4px;
-    }
-
-    .project h3 {
-      margin: 0 0 10px;
-      font-size: 1.35rem;
-      letter-spacing: -0.03em;
-    }
-
-    .project p {
-      margin: 0 0 14px;
-      color: var(--muted);
-    }
-
-    .project ul {
-      margin: 0 0 16px;
-      padding-left: 18px;
-      color: var(--muted);
-    }
-
-    .project li + li { margin-top: 6px; }
-
-    .repo-link {
-      color: var(--accent);
-      font-weight: 650;
-    }
-
-    .repo-link:hover {
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-
     .footer {
       padding: 24px 0 42px;
     }
@@ -332,13 +276,11 @@
     @media (max-width: 900px) {
       .hero-grid,
       .about-grid,
-      .contact-grid,
-      .project {
+      .contact-grid {
         grid-template-columns: 1fr;
       }
 
       .profile-wrap { justify-content: flex-start; }
-      .project { gap: 10px; }
     }
 
     @media (max-width: 640px) {
@@ -362,7 +304,6 @@
       <div class="nav-right">
         <nav class="nav-links">
           <a href="#about">About</a>
-          <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
           <a href="https://github.com/HwangSunghoon" target="_blank" rel="noopener noreferrer">GitHub</a>
         </nav>
@@ -403,8 +344,7 @@
           </div>
 
           <div class="actions">
-            <a class="btn btn-primary" href="#projects">프로젝트 보기 / View Projects</a>
-            <a class="btn btn-secondary" href="https://github.com/HwangSunghoon" target="_blank" rel="noopener noreferrer">GitHub 방문 / Visit GitHub</a>
+            <a class="btn btn-primary" href="https://github.com/HwangSunghoon" target="_blank" rel="noopener noreferrer">GitHub 방문 / Visit GitHub</a>
           </div>
         </div>
 
@@ -477,90 +417,6 @@
               <div class="lang-en"><p>I build end-to-end, deployable AI projects using FastAPI, Next.js, Docker, and AWS EC2.</p></div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="container">
-        <div class="section-head">
-          <h2>Selected Repositories</h2>
-          <div class="lang-ko"><p>현재 GitHub에 정리한 주요 프로젝트입니다.</p></div>
-          <div class="lang-en"><p>Selected repositories that represent my recent work and technical direction.</p></div>
-        </div>
-
-        <div class="projects-list">
-          <article class="project">
-            <div class="project-meta">Data Analysis</div>
-            <div>
-              <h3>Used Car Price Analysis</h3>
-              <div class="lang-ko">
-                <p>엔카 일반·판매 완료 매물과 현대·기아 인증중고차 데이터를 활용해 국내 중고차 가격 형성 요인을 분석한 응용데이터분석 프로젝트입니다.</p>
-                <ul>
-                  <li>연식, 주행거리, 옵션, 사고 이력, 수급 및 인증 여부의 가격 영향 분석</li>
-                  <li>회귀분석, 상호작용항, ANOVA F-test, 군집분석을 활용한 세 가지 가설 검증</li>
-                  <li>크롤링·상세 정보 보강부터 전처리, 시각화, 최종 보고서 작성까지 수행</li>
-                </ul>
-              </div>
-              <div class="lang-en">
-                <p>An applied data analysis project investigating the factors that shape used-car prices in Korea using Encar listings, sold vehicles, and Hyundai/Kia certified-used-car data.</p>
-                <ul>
-                  <li>Analyzed depreciation, options, accident history, supply constraints, and certification premiums</li>
-                  <li>Tested three hypotheses using regression, interaction terms, ANOVA F-tests, and clustering</li>
-                  <li>Covered the full workflow from crawling and enrichment to preprocessing, visualization, and reporting</li>
-                </ul>
-              </div>
-              <a class="repo-link" href="https://github.com/HwangSunghoon/used-car-price-analysis" target="_blank" rel="noopener noreferrer">Repository →</a>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="project-meta">iOS App</div>
-            <div>
-              <h3>LLM Widget iOS App</h3>
-              <div class="lang-ko">
-                <p>SwiftUI와 WidgetKit을 기반으로 홈 화면 위젯에서 미리 설정한 프롬프트를 실행하고, LLM이 생성한 요약 응답을 빠르게 확인할 수 있는 iOS 앱입니다.</p>
-                <ul>
-                  <li>WidgetKit과 App Intents를 활용한 빠른 프롬프트 실행</li>
-                  <li>OpenAI API 연동 및 제목과 핵심 항목 형태의 구조화된 응답</li>
-                  <li>App Group 저장소를 통한 앱·위젯 간 설정 및 데이터 공유</li>
-                </ul>
-              </div>
-              <div class="lang-en">
-                <p>An iOS app built with SwiftUI and WidgetKit that runs predefined prompts from the home-screen widget and displays concise LLM-generated summaries.</p>
-                <ul>
-                  <li>Quick prompt execution with WidgetKit and App Intents</li>
-                  <li>OpenAI API integration with structured title-and-bullet responses</li>
-                  <li>Shared settings and data between the app and widget through an App Group</li>
-                </ul>
-              </div>
-              <a class="repo-link" href="https://github.com/HwangSunghoon/llm-widget-ios" target="_blank" rel="noopener noreferrer">Repository →</a>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="project-meta">AI Service</div>
-            <div>
-              <h3>Shopping AI Agent</h3>
-              <div class="lang-ko">
-                <p>자연어 쇼핑 검색과 추천, 조건 누적형 후속 탐색을 지원하며 AI가 상품 탐색을 보조하도록 설계한 쇼핑 검색 서비스입니다.</p>
-                <ul>
-                  <li>LLM과 규칙 기반 fallback을 결합한 가격·용도·기능·브랜드 조건 해석</li>
-                  <li>네이버 쇼핑 API 후보 수집 후 가격, 리뷰, 배송, 선호도, 대화 문맥 기반 재정렬</li>
-                  <li>Next.js 15, FastAPI, SQLite로 구현하고 AWS EC2·Nginx·systemd 배포 구조 구성</li>
-                </ul>
-              </div>
-              <div class="lang-en">
-                <p>A shopping search service supporting natural-language queries, recommendations, and context-aware refinement while keeping product discovery at the center of the experience.</p>
-                <ul>
-                  <li>LLM-based condition parsing with rule-based fallback for price, use case, features, and brands</li>
-                  <li>Naver Shopping API retrieval followed by reranking using price, reviews, delivery, preferences, and conversation context</li>
-                  <li>Built with Next.js 15, FastAPI, and SQLite, with an AWS EC2, Nginx, and systemd deployment setup</li>
-                </ul>
-              </div>
-              <a class="repo-link" href="https://github.com/HwangSunghoon/shopping-ai-agent" target="_blank" rel="noopener noreferrer">Repository →</a>
-            </div>
-          </article>
         </div>
       </div>
     </section>
