@@ -301,14 +301,6 @@
     .project-links { display: flex; flex-wrap: wrap; gap: 12px 20px; margin-top: 18px; }
     .project-links a { color: var(--accent); font-size: 0.92rem; font-weight: 600; }
     .project-links a:hover { text-decoration: underline; text-underline-offset: 4px; }
-    .project-details { margin-top: 22px; }
-    .project-details summary { cursor: pointer; font-size: 0.92rem; font-weight: 600; }
-    body[data-lang="ko"] .project-details summary .lang-ko,
-    body[data-lang="en"] .project-details summary .lang-en { display: inline; }
-    body[data-lang="ko"] .project-details summary .lang-en,
-    body[data-lang="en"] .project-details summary .lang-ko { display: none; }
-    .project-details > div { margin-top: 14px; }
-    .project-details p:last-child { margin-bottom: 0; }
     .related-projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; margin-top: 36px; }
     .related-projects h4 { font-size: 1.05rem; }
     .related-projects p { font-size: 0.94rem; }
@@ -373,8 +365,8 @@
       <a href="#top" class="brand">Hwang Sung Hoon</a>
       <div class="nav-right">
         <nav class="nav-links">
-          <a href="#projects">Projects</a>
           <a href="#about">About</a>
+          <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
           <a href="https://github.com/HwangSunghoon" target="_blank" rel="noopener noreferrer">GitHub</a>
         </nav>
@@ -422,104 +414,6 @@
 
         <div class="profile-wrap">
           <img class="profile-photo" src="./assets/DD3CB8DF-4BEE-4CBD-B1DC-18E92A3C35A0_4_5005_c.jpeg" alt="Profile photo of Hwang Sung Hoon" />
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" aria-labelledby="projects-heading">
-      <div class="container">
-        <div class="section-head">
-          <h2 id="projects-heading">Selected Projects</h2>
-          <div class="lang-ko"><p>데이터를 이해하고, AI를 실험하고, 실제 제품으로 연결한 작업들입니다.</p></div>
-          <div class="lang-en"><p>Understanding data, experimenting with AI, and turning ideas into usable products.</p></div>
-        </div>
-
-        <div class="project-group">
-          <h3 class="project-category">01 / Data Analysis &amp; ML</h3>
-          <article class="project-card">
-            <div class="project-grid">
-              <div>
-                <div class="project-status"><span class="lang-ko">데이터 분석 · 응용 프로토타입</span><span class="lang-en">Data analysis · Applied prototype</span></div>
-                <div class="lang-ko"><h4>중고차 가격 분석 → Certified Price Lens</h4><p>차급·공급 요인·제조사 인증 여부와 중고차 가격의 관계를 분석하고, 결과를 차량 상세 페이지에서 확인할 수 있는 Chrome 확장 프로그램으로 연결했습니다.</p></div>
-                <div class="lang-en"><h4>Used-car pricing → Certified Price Lens</h4><p>Analyzed how vehicle segments, supply factors, and manufacturer certification relate to used-car prices, then brought the findings into a Chrome extension for vehicle listing pages.</p></div>
-                <div class="project-tags">Python · pandas · Regression · Clustering · JavaScript</div>
-              </div>
-              <div>
-                <div class="lang-ko"><ul class="project-points"><li>매물 수집·전처리부터 회귀분석, 상호작용항과 가설 검정까지</li><li>유사 차량 군집 안에서 인증 프리미엄 비교</li><li>예상가와 인증 프리미엄을 보여주는 연구용 가격 해석 도구</li></ul></div>
-                <div class="lang-en"><ul class="project-points"><li>Listing collection, preprocessing, regression, interactions, and hypothesis testing</li><li>Certification premium comparisons within similar-vehicle clusters</li><li>A research prototype showing estimated prices and certification premiums</li></ul></div>
-              </div>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/HwangSunghoon/used-car-price-analysis" target="_blank" rel="noopener noreferrer"><span class="lang-ko">분석 코드 · 보고서 ↗</span><span class="lang-en">Analysis &amp; report ↗</span></a>
-              <a href="https://github.com/HwangSunghoon/certified-price-lens" target="_blank" rel="noopener noreferrer">Certified Price Lens ↗</a>
-            </div>
-            <details class="project-details">
-              <summary><span class="lang-ko">분석에서 응용까지</span><span class="lang-en">From analysis to application</span></summary>
-              <div class="lang-ko"><p>차급별 감가 구조, 신차 공급 요인, 제조사 인증 효과를 각각 가설로 나누어 분석했습니다. 지지되지 않은 가설과 표본의 한계도 결과에 포함했습니다.</p><p>확장 프로그램은 분석 결과를 적용한 별도의 근사 모형을 사용합니다. 보고서의 분석 모형과 동일한 성능으로 제시하지 않으며, 최신 시세나 개별 차량의 상태를 완전히 반영하는 상용 가격 예측 서비스는 아닙니다.</p></div>
-              <div class="lang-en"><p>The analysis examines segment-specific depreciation, new-car supply factors, and manufacturer certification as separate hypotheses, including unsupported hypotheses and sample limitations.</p><p>The extension uses a separate approximate model derived from the analysis. Its performance is not presented as identical to the report's models, and it is not a production valuation service reflecting current market prices or every vehicle's condition.</p></div>
-            </details>
-          </article>
-        </div>
-
-        <div class="project-group">
-          <h3 class="project-category">02 / AI Systems &amp; Agents</h3>
-          <article class="project-card">
-            <div class="lang-ko"><h4>Multi-agent 연구 중</h4><p>멀티 에이전트 기반 시스템의 효율성과 성능 향상을 위한 연구 및 공부를 진행하고 있습니다.</p></div>
-            <div class="lang-en"><h4>Multi-agent research in progress</h4><p>Researching and studying ways to improve the efficiency and performance of multi-agent systems.</p></div>
-          </article>
-          <div class="related-projects">
-            <article class="project-card">
-              <h4>Mafia Night</h4>
-              <div class="lang-ko"><p>사용자와 AI 7명이 함께하는 실시간 마피아 게임. 에이전트별 기억·정보 격리, 발언 근거 검증과 게임 품질 평가를 구현했습니다.</p></div>
-              <div class="lang-en"><p>A real-time Mafia game with one human and seven AI players, with agent-specific memory, information isolation, evidence checks, and game-quality evaluation.</p></div>
-              <div class="project-tags">FastAPI · WebSocket · PostgreSQL · Redis</div>
-              <div class="project-links"><a href="https://github.com/HwangSunghoon/agent-mafia-night" target="_blank" rel="noopener noreferrer"><span class="lang-ko">실행 화면 · 코드 ↗</span><span class="lang-en">Screenshots &amp; code ↗</span></a></div>
-            </article>
-            <article class="project-card">
-              <h4>Shopping AI Agent</h4>
-              <div class="lang-ko"><p>자연어 조건 추출부터 상품 검색·재정렬, 대화 문맥을 반영한 후속 탐색까지 연결한 쇼핑 검색 서비스입니다.</p></div>
-              <div class="lang-en"><p>A shopping-search service connecting natural-language constraints to product retrieval, reranking, and follow-up searches with conversational context.</p></div>
-              <div class="project-tags">Next.js · FastAPI · LLM · Naver Shopping API</div>
-              <div class="project-links"><a href="https://github.com/HwangSunghoon/shopping-ai-agent" target="_blank" rel="noopener noreferrer"><span class="lang-ko">구조 · 코드 ↗</span><span class="lang-en">Architecture &amp; code ↗</span></a></div>
-            </article>
-          </div>
-        </div>
-
-        <div class="project-group">
-          <h3 class="project-category">03 / Apps &amp; Products</h3>
-          <article class="project-card">
-            <div class="project-grid">
-              <div>
-                <div class="project-status"><span class="lang-ko">Mac App Store 출시 · 무료</span><span class="lang-en">Available on the Mac App Store · Free</span></div>
-                <h4>DeskBoard</h4>
-                <div class="lang-ko"><p>일정·할 일·메모·날씨를 데스크톱 옆에 모아두는 macOS 사이드바입니다. 기능 구현부터 권한 요청 UX 개선과 App Store 심사 대응, 출시까지 진행했습니다.</p></div>
-                <div class="lang-en"><p>A macOS sidebar bringing calendars, tasks, notes, and weather alongside your work. Developed the app, refined its permission UX, addressed App Review feedback, and released it on the App Store.</p></div>
-                <div class="project-tags">SwiftUI · AppKit · SwiftData · EventKit</div>
-              </div>
-              <div>
-                <div class="lang-ko"><ul class="project-points"><li>데스크톱 사이드바와 사용자 설정형 섹션</li><li>로컬 데이터 저장·복구와 선택적 캘린더 연동</li><li>권한 변경 직후 상태 갱신과 접근 거부 시 대체 화면</li></ul></div>
-                <div class="lang-en"><ul class="project-points"><li>A desktop sidebar with configurable sections</li><li>Local persistence, recovery, and optional calendar integration</li><li>Immediate permission-state updates and a usable denied-access state</li></ul></div>
-              </div>
-            </div>
-            <div class="project-links">
-              <a href="https://apps.apple.com/kr/app/deskboard-desktop-sidebar/id6814308273" target="_blank" rel="noopener noreferrer">Mac App Store ↗</a>
-              <a href="https://github.com/HwangSunghoon/DeskBoard" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-            </div>
-            <details class="project-details">
-              <summary><span class="lang-ko">구현과 출시 과정</span><span class="lang-en">Implementation and release</span></summary>
-              <div class="lang-ko"><p>SwiftUI 화면을 AppKit 데스크톱 패널과 연결하고, 할 일·메모를 로컬에 저장하도록 구성했습니다. 캘린더는 선택 기능으로 분리해 권한 없이도 나머지 기능을 사용할 수 있게 했습니다.</p><p>심사 피드백을 반영해 자체 허용 버튼을 없애고, 사용자가 Today를 켰을 때 필요한 경우에만 macOS 권한창을 표시하도록 개선했습니다. 권한 동의 직후 표시 상태를 갱신하는 흐름도 보완했습니다. 출시 버전에는 주식·시장 지표 기능이 포함되지 않습니다.</p></div>
-              <div class="lang-en"><p>Connected SwiftUI views to an AppKit desktop panel and implemented local task and note storage. Calendar integration is optional, so the rest of the app works without permission.</p><p>Following review feedback, removed the custom permission button and presented the native macOS prompt only when needed after the user enables Today. Also improved state updates immediately after consent. The App Store edition does not include stock or market quotes.</p></div>
-            </details>
-          </article>
-          <div class="related-projects">
-            <article class="project-card">
-              <h4>SilentCop</h4>
-              <div class="lang-ko"><p>전방 단속카메라를 지도와 음성으로 안내하는 iOS 프로젝트. 위치·진행 방향 기반 후보 탐지, 백그라운드 위치 처리와 오디오 안내를 다룹니다.</p></div>
-              <div class="lang-en"><p>An iOS camera-guidance project exploring location- and heading-based detection, background location handling, and voice alerts.</p></div>
-              <div class="project-tags">SwiftUI · MapKit · Core Location · iOS</div>
-              <div class="project-links"><a href="https://github.com/HwangSunghoon/SilentCop" target="_blank" rel="noopener noreferrer"><span class="lang-ko">실행 화면 · 코드 ↗</span><span class="lang-en">Screenshots &amp; code ↗</span></a></div>
-            </article>
-          </div>
         </div>
       </div>
     </section>
@@ -586,6 +480,94 @@
               <div class="lang-ko"><p>실제 사용 환경의 권한·저장·상태 처리부터 배포까지, iOS와 macOS 앱을 제품으로 완성하는 과정을 경험하고 있습니다.</p></div>
               <div class="lang-en"><p>I develop iOS and macOS products, working through permissions, persistence, state handling, and distribution.</p></div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="projects-heading">Selected Projects</h2>
+          <div class="lang-ko"><p>데이터를 이해하고, AI를 실험하고, 실제 제품으로 연결한 작업들입니다.</p></div>
+          <div class="lang-en"><p>Understanding data, experimenting with AI, and turning ideas into usable products.</p></div>
+        </div>
+
+        <div class="project-group">
+          <h3 class="project-category">01 / Data Analysis &amp; ML</h3>
+          <article class="project-card">
+            <div class="project-grid">
+              <div>
+                <div class="project-status"><span class="lang-ko">데이터 분석 · 응용 프로토타입</span><span class="lang-en">Data analysis · Applied prototype</span></div>
+                <div class="lang-ko"><h4>중고차 가격 분석 → Certified Price Lens</h4><p>차급·공급 요인·제조사 인증 여부와 중고차 가격의 관계를 분석하고, 결과를 차량 상세 페이지에서 확인할 수 있는 Chrome 확장 프로그램으로 연결했습니다.</p></div>
+                <div class="lang-en"><h4>Used-car pricing → Certified Price Lens</h4><p>Analyzed how vehicle segments, supply factors, and manufacturer certification relate to used-car prices, then brought the findings into a Chrome extension for vehicle listing pages.</p></div>
+                <div class="project-tags">Python · pandas · Regression · Clustering · JavaScript</div>
+              </div>
+              <div>
+                <div class="lang-ko"><ul class="project-points"><li>매물 수집·전처리부터 회귀분석, 상호작용항과 가설 검정까지</li><li>유사 차량 군집 안에서 인증 프리미엄 비교</li><li>예상가와 인증 프리미엄을 보여주는 연구용 가격 해석 도구</li></ul></div>
+                <div class="lang-en"><ul class="project-points"><li>Listing collection, preprocessing, regression, interactions, and hypothesis testing</li><li>Certification premium comparisons within similar-vehicle clusters</li><li>A research prototype showing estimated prices and certification premiums</li></ul></div>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/HwangSunghoon/used-car-price-analysis" target="_blank" rel="noopener noreferrer"><span class="lang-ko">분석 코드 · 보고서 ↗</span><span class="lang-en">Analysis &amp; report ↗</span></a>
+              <a href="https://github.com/HwangSunghoon/certified-price-lens" target="_blank" rel="noopener noreferrer">Certified Price Lens ↗</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="project-group">
+          <h3 class="project-category">02 / AI Systems &amp; Agents</h3>
+          <article class="project-card">
+            <div class="lang-ko"><h4>Multi-agent 연구 중</h4><p>멀티 에이전트 기반 시스템의 효율성과 성능 향상을 위한 연구 및 공부를 진행하고 있습니다.</p></div>
+            <div class="lang-en"><h4>Multi-agent research in progress</h4><p>Researching and studying ways to improve the efficiency and performance of multi-agent systems.</p></div>
+          </article>
+          <div class="related-projects">
+            <article class="project-card">
+              <h4>Mafia Night</h4>
+              <div class="lang-ko"><p>사용자와 AI 7명이 함께하는 실시간 마피아 게임. 에이전트별 기억·정보 격리, 발언 근거 검증과 게임 품질 평가를 구현했습니다.</p></div>
+              <div class="lang-en"><p>A real-time Mafia game with one human and seven AI players, with agent-specific memory, information isolation, evidence checks, and game-quality evaluation.</p></div>
+              <div class="project-tags">FastAPI · WebSocket · PostgreSQL · Redis</div>
+              <div class="project-links"><a href="https://github.com/HwangSunghoon/agent-mafia-night" target="_blank" rel="noopener noreferrer"><span class="lang-ko">실행 화면 · 코드 ↗</span><span class="lang-en">Screenshots &amp; code ↗</span></a></div>
+            </article>
+            <article class="project-card">
+              <h4>Shopping AI Agent</h4>
+              <div class="lang-ko"><p>자연어 조건 추출부터 상품 검색·재정렬, 대화 문맥을 반영한 후속 탐색까지 연결한 쇼핑 검색 서비스입니다.</p></div>
+              <div class="lang-en"><p>A shopping-search service connecting natural-language constraints to product retrieval, reranking, and follow-up searches with conversational context.</p></div>
+              <div class="project-tags">Next.js · FastAPI · LLM · Naver Shopping API</div>
+              <div class="project-links"><a href="https://github.com/HwangSunghoon/shopping-ai-agent" target="_blank" rel="noopener noreferrer"><span class="lang-ko">구조 · 코드 ↗</span><span class="lang-en">Architecture &amp; code ↗</span></a></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="project-group">
+          <h3 class="project-category">03 / Apps &amp; Products</h3>
+          <article class="project-card">
+            <div class="project-grid">
+              <div>
+                <div class="project-status"><span class="lang-ko">Mac App Store 출시 · 무료</span><span class="lang-en">Available on the Mac App Store · Free</span></div>
+                <h4>DeskBoard</h4>
+                <div class="lang-ko"><p>일정·할 일·메모·날씨를 데스크톱 옆에 모아두는 macOS 사이드바입니다. 기능 구현부터 권한 요청 UX 개선과 App Store 심사 대응, 출시까지 진행했습니다.</p></div>
+                <div class="lang-en"><p>A macOS sidebar bringing calendars, tasks, notes, and weather alongside your work. Developed the app, refined its permission UX, addressed App Review feedback, and released it on the App Store.</p></div>
+                <div class="project-tags">SwiftUI · AppKit · SwiftData · EventKit</div>
+              </div>
+              <div>
+                <div class="lang-ko"><ul class="project-points"><li>데스크톱 사이드바와 사용자 설정형 섹션</li><li>로컬 데이터 저장·복구와 선택적 캘린더 연동</li><li>권한 변경 직후 상태 갱신과 접근 거부 시 대체 화면</li></ul></div>
+                <div class="lang-en"><ul class="project-points"><li>A desktop sidebar with configurable sections</li><li>Local persistence, recovery, and optional calendar integration</li><li>Immediate permission-state updates and a usable denied-access state</li></ul></div>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://apps.apple.com/kr/app/deskboard-desktop-sidebar/id6814308273" target="_blank" rel="noopener noreferrer">Mac App Store ↗</a>
+              <a href="https://github.com/HwangSunghoon/DeskBoard" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+          </article>
+          <div class="related-projects">
+            <article class="project-card">
+              <h4>SilentCop</h4>
+              <div class="lang-ko"><p>전방 단속카메라를 지도와 음성으로 안내하는 iOS 프로젝트. 위치·진행 방향 기반 후보 탐지, 백그라운드 위치 처리와 오디오 안내를 다룹니다.</p></div>
+              <div class="lang-en"><p>An iOS camera-guidance project exploring location- and heading-based detection, background location handling, and voice alerts.</p></div>
+              <div class="project-tags">SwiftUI · MapKit · Core Location · iOS</div>
+              <div class="project-links"><a href="https://github.com/HwangSunghoon/SilentCop" target="_blank" rel="noopener noreferrer"><span class="lang-ko">실행 화면 · 코드 ↗</span><span class="lang-en">Screenshots &amp; code ↗</span></a></div>
+            </article>
           </div>
         </div>
       </div>
